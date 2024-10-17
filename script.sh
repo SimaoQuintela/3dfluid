@@ -11,4 +11,4 @@ OUTPUT_DIR="output_${SLURM_JOB_NAME}_${SLURM_JOB_ID}"
 mkdir -p $OUTPUT_DIR
 
 # Redirect standard output and error dynamically
-srun --partition=cpar perf stat -e instructions,cycles ./fluid_sim > $OUTPUT_DIR/fluid_sim_${SLURM_JOB_ID}.out 2> $OUTPUT_DIR/fluid_sim_${SLURM_JOB_ID}.err
+srun --partition=cpar perf stat -d ./fluid_sim > $OUTPUT_DIR/fluid_sim_${SLURM_JOB_ID}.out 2> $OUTPUT_DIR/fluid_sim_${SLURM_JOB_ID}.err

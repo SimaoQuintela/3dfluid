@@ -1,0 +1,240 @@
+
+ Performance counter stats for './fluid_sim':
+
+         13,906.41 msec task-clock                #    0.998 CPUs utilized          
+                 3      context-switches          #    0.000 K/sec                  
+                 1      cpu-migrations            #    0.000 K/sec                  
+             3,866      page-faults               #    0.278 K/sec                  
+    39,688,483,973      cycles                    #    2.854 GHz                      (44.45%)
+    33,471,552,014      stalled-cycles-frontend   #   84.34% frontend cycles idle     (55.56%)
+    15,685,550,639      instructions              #    0.40  insn per cycle         
+                                                  #    2.13  stalled cycles per insn  (66.67%)
+       666,538,287      branches                  #   47.930 M/sec                    (66.67%)
+         3,112,621      branch-misses             #    0.47% of all branches          (66.43%)
+     6,301,078,689      L1-dcache-loads           #  453.106 M/sec                    (27.13%)
+     2,753,729,911      L1-dcache-load-misses     #   43.70% of all L1-dcache hits    (22.32%)
+     2,225,106,795      LLC-loads                 #  160.006 M/sec                    (22.23%)
+         4,466,134      LLC-load-misses           #    0.20% of all LL-cache hits     (33.33%)
+
+      13.931712326 seconds time elapsed
+
+      13.900830000 seconds user
+       0.005999000 seconds sys
+
+
+
+ Performance counter stats for './fluid_sim':
+
+         13,928.06 msec task-clock                #    0.998 CPUs utilized          
+                11      context-switches          #    0.001 K/sec                  
+                 1      cpu-migrations            #    0.000 K/sec                  
+             3,866      page-faults               #    0.278 K/sec                  
+    39,727,768,762      cycles                    #    2.852 GHz                      (44.43%)
+    33,510,161,847      stalled-cycles-frontend   #   84.35% frontend cycles idle     (55.54%)
+    15,708,878,295      instructions              #    0.40  insn per cycle         
+                                                  #    2.13  stalled cycles per insn  (66.66%)
+       668,761,383      branches                  #   48.015 M/sec                    (66.67%)
+         3,106,582      branch-misses             #    0.46% of all branches          (66.67%)
+     6,404,782,373      L1-dcache-loads           #  459.848 M/sec                    (44.49%)
+     2,977,603,388      L1-dcache-load-misses     #   46.49% of all L1-dcache hits    (30.88%)
+     2,204,270,643      LLC-loads                 #  158.261 M/sec                    (22.21%)
+         4,494,362      LLC-load-misses           #    0.20% of all LL-cache hits     (33.32%)
+
+      13.951518929 seconds time elapsed
+
+      13.924465000 seconds user
+       0.004000000 seconds sys
+
+
+
+ Performance counter stats for './fluid_sim':
+
+         13,936.50 msec task-clock                #    0.998 CPUs utilized          
+                 3      context-switches          #    0.000 K/sec                  
+                 0      cpu-migrations            #    0.000 K/sec                  
+             3,866      page-faults               #    0.277 K/sec                  
+    39,759,565,248      cycles                    #    2.853 GHz                      (33.35%)
+    33,544,940,291      stalled-cycles-frontend   #   84.37% frontend cycles idle     (44.47%)
+    15,673,346,598      instructions              #    0.39  insn per cycle         
+                                                  #    2.14  stalled cycles per insn  (55.58%)
+       665,014,548      branches                  #   47.717 M/sec                    (66.67%)
+         3,111,223      branch-misses             #    0.47% of all branches          (66.68%)
+     6,436,189,640      L1-dcache-loads           #  461.823 M/sec                    (55.62%)
+     2,761,064,661      L1-dcache-load-misses     #   42.90% of all L1-dcache hits    (23.14%)
+     2,218,489,870      LLC-loads                 #  159.186 M/sec                    (22.22%)
+         5,001,317      LLC-load-misses           #    0.23% of all LL-cache hits     (22.30%)
+
+      13.961374440 seconds time elapsed
+
+      13.932843000 seconds user
+       0.004000000 seconds sys
+
+
+
+ Performance counter stats for './fluid_sim':
+
+         13,959.06 msec task-clock                #    0.998 CPUs utilized          
+                14      context-switches          #    0.001 K/sec                  
+                 1      cpu-migrations            #    0.000 K/sec                  
+             3,866      page-faults               #    0.277 K/sec                  
+    39,812,313,423      cycles                    #    2.852 GHz                      (44.44%)
+    33,595,640,390      stalled-cycles-frontend   #   84.39% frontend cycles idle     (55.56%)
+    15,717,551,860      instructions              #    0.39  insn per cycle         
+                                                  #    2.14  stalled cycles per insn  (66.67%)
+       667,624,506      branches                  #   47.827 M/sec                    (66.67%)
+         3,091,327      branch-misses             #    0.46% of all branches          (66.67%)
+     6,369,566,910      L1-dcache-loads           #  456.303 M/sec                    (57.03%)
+     2,927,450,070      L1-dcache-load-misses     #   45.96% of all L1-dcache hits    (32.22%)
+     2,217,588,162      LLC-loads                 #  158.864 M/sec                    (22.22%)
+         4,977,224      LLC-load-misses           #    0.22% of all LL-cache hits     (33.33%)
+
+      13.984770743 seconds time elapsed
+
+      13.954591000 seconds user
+       0.004999000 seconds sys
+
+
+
+ Performance counter stats for './fluid_sim':
+
+         14,089.91 msec task-clock                #    0.999 CPUs utilized          
+                15      context-switches          #    0.001 K/sec                  
+                 0      cpu-migrations            #    0.000 K/sec                  
+             3,865      page-faults               #    0.274 K/sec                  
+    40,181,676,120      cycles                    #    2.852 GHz                      (44.44%)
+    33,980,305,765      stalled-cycles-frontend   #   84.57% frontend cycles idle     (55.54%)
+    15,680,622,305      instructions              #    0.39  insn per cycle         
+                                                  #    2.17  stalled cycles per insn  (66.66%)
+       666,539,408      branches                  #   47.306 M/sec                    (66.67%)
+         3,160,666      branch-misses             #    0.47% of all branches          (66.68%)
+     6,404,581,343      L1-dcache-loads           #  454.551 M/sec                    (22.46%)
+     2,745,619,134      L1-dcache-load-misses     #   42.87% of all L1-dcache hits    (22.22%)
+     2,211,571,077      LLC-loads                 #  156.961 M/sec                    (22.21%)
+         4,850,597      LLC-load-misses           #    0.22% of all LL-cache hits     (33.32%)
+
+      14.111023687 seconds time elapsed
+
+      14.087462000 seconds user
+       0.003000000 seconds sys
+
+
+
+ Performance counter stats for './fluid_sim':
+
+         14,129.85 msec task-clock                #    0.999 CPUs utilized          
+                 9      context-switches          #    0.001 K/sec                  
+                 0      cpu-migrations            #    0.000 K/sec                  
+             3,866      page-faults               #    0.274 K/sec                  
+    40,330,340,441      cycles                    #    2.854 GHz                      (44.44%)
+    34,116,706,886      stalled-cycles-frontend   #   84.59% frontend cycles idle     (55.56%)
+    15,712,389,674      instructions              #    0.39  insn per cycle         
+                                                  #    2.17  stalled cycles per insn  (66.67%)
+       667,534,788      branches                  #   47.243 M/sec                    (66.67%)
+         3,136,953      branch-misses             #    0.47% of all branches          (66.67%)
+     6,499,269,075      L1-dcache-loads           #  459.967 M/sec                    (44.42%)
+     2,753,840,731      L1-dcache-load-misses     #   42.37% of all L1-dcache hits    (55.40%)
+     2,214,876,270      LLC-loads                 #  156.752 M/sec                    (22.22%)
+         4,506,898      LLC-load-misses           #    0.20% of all LL-cache hits     (33.33%)
+
+      14.150380180 seconds time elapsed
+
+      14.124318000 seconds user
+       0.006000000 seconds sys
+
+
+
+ Performance counter stats for './fluid_sim':
+
+         14,163.15 msec task-clock                #    0.999 CPUs utilized          
+                 3      context-switches          #    0.000 K/sec                  
+                 0      cpu-migrations            #    0.000 K/sec                  
+             3,866      page-faults               #    0.273 K/sec                  
+    40,527,742,017      cycles                    #    2.861 GHz                      (34.25%)
+    34,229,404,177      stalled-cycles-frontend   #   84.46% frontend cycles idle     (34.46%)
+    15,678,223,371      instructions              #    0.39  insn per cycle         
+                                                  #    2.18  stalled cycles per insn  (45.57%)
+       665,528,107      branches                  #   46.990 M/sec                    (55.56%)
+         3,154,663      branch-misses             #    0.47% of all branches          (66.47%)
+     6,423,416,415      L1-dcache-loads           #  453.530 M/sec                    (37.94%)
+     2,795,357,576      L1-dcache-load-misses     #   43.52% of all L1-dcache hits    (44.82%)
+     2,233,732,659      LLC-loads                 #  157.714 M/sec                    (25.28%)
+         4,369,347      LLC-load-misses           #    0.20% of all LL-cache hits     (23.13%)
+
+      14.184129893 seconds time elapsed
+
+      14.156599000 seconds user
+       0.006999000 seconds sys
+
+
+
+ Performance counter stats for './fluid_sim':
+
+         14,192.39 msec task-clock                #    0.998 CPUs utilized          
+                11      context-switches          #    0.001 K/sec                  
+                 0      cpu-migrations            #    0.000 K/sec                  
+             3,866      page-faults               #    0.272 K/sec                  
+    40,473,987,559      cycles                    #    2.852 GHz                      (44.44%)
+    34,256,072,715      stalled-cycles-frontend   #   84.64% frontend cycles idle     (55.56%)
+    15,693,120,389      instructions              #    0.39  insn per cycle         
+                                                  #    2.18  stalled cycles per insn  (66.67%)
+       666,581,480      branches                  #   46.968 M/sec                    (66.67%)
+         3,158,232      branch-misses             #    0.47% of all branches          (66.67%)
+     6,352,102,953      L1-dcache-loads           #  447.571 M/sec                    (56.26%)
+     3,067,027,575      L1-dcache-load-misses     #   48.28% of all L1-dcache hits    (28.90%)
+     2,215,245,725      LLC-loads                 #  156.087 M/sec                    (22.22%)
+         5,230,530      LLC-load-misses           #    0.24% of all LL-cache hits     (33.33%)
+
+      14.213766470 seconds time elapsed
+
+      14.186865000 seconds user
+       0.006000000 seconds sys
+
+
+
+ Performance counter stats for './fluid_sim':
+
+         14,205.42 msec task-clock                #    0.998 CPUs utilized          
+                31      context-switches          #    0.002 K/sec                  
+                 0      cpu-migrations            #    0.000 K/sec                  
+             3,865      page-faults               #    0.272 K/sec                  
+    40,588,343,632      cycles                    #    2.857 GHz                      (44.44%)
+    34,366,464,220      stalled-cycles-frontend   #   84.67% frontend cycles idle     (55.55%)
+    15,741,995,077      instructions              #    0.39  insn per cycle         
+                                                  #    2.18  stalled cycles per insn  (66.65%)
+       670,220,866      branches                  #   47.181 M/sec                    (65.69%)
+        20,054,807      branch-misses             #    2.99% of all branches          (64.05%)
+     6,603,433,384      L1-dcache-loads           #  464.853 M/sec                    (31.26%)
+     2,721,996,145      L1-dcache-load-misses     #   41.22% of all L1-dcache hits    (26.56%)
+     2,212,333,177      LLC-loads                 #  155.739 M/sec                    (22.65%)
+        11,132,878      LLC-load-misses           #    0.50% of all LL-cache hits     (33.32%)
+
+      14.229435744 seconds time elapsed
+
+      14.200927000 seconds user
+       0.005001000 seconds sys
+
+
+
+ Performance counter stats for './fluid_sim':
+
+         14,229.74 msec task-clock                #    0.998 CPUs utilized          
+                10      context-switches          #    0.001 K/sec                  
+                 0      cpu-migrations            #    0.000 K/sec                  
+             3,866      page-faults               #    0.272 K/sec                  
+    40,584,352,593      cycles                    #    2.852 GHz                      (44.45%)
+    34,370,876,354      stalled-cycles-frontend   #   84.69% frontend cycles idle     (55.56%)
+    15,707,421,133      instructions              #    0.39  insn per cycle         
+                                                  #    2.19  stalled cycles per insn  (66.67%)
+       667,809,284      branches                  #   46.931 M/sec                    (66.67%)
+         3,132,079      branch-misses             #    0.47% of all branches          (66.67%)
+     6,546,406,136      L1-dcache-loads           #  460.051 M/sec                    (54.76%)
+     2,941,392,867      L1-dcache-load-misses     #   44.93% of all L1-dcache hits    (30.41%)
+     2,218,498,315      LLC-loads                 #  155.906 M/sec                    (22.22%)
+         4,778,954      LLC-load-misses           #    0.22% of all LL-cache hits     (33.33%)
+
+      14.252108156 seconds time elapsed
+
+      14.223235000 seconds user
+       0.007000000 seconds sys
+
+

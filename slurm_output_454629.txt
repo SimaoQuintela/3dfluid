@@ -1,0 +1,43 @@
+Running perf for ./CPUexe 5 times and calculating the average.
+Run 1:
+Cycles: 
+Instructions: 
+Time:  seconds
+(standard_in) 2: syntax error
+(standard_in) 2: syntax error
+(standard_in) 2: syntax error
+Run 2:
+Cycles: 
+Instructions: 
+Time:  seconds
+(standard_in) 1: syntax error
+(standard_in) 1: syntax error
+(standard_in) 1: syntax error
+Run 3:
+Cycles: 
+Instructions: 
+Time:  seconds
+(standard_in) 1: syntax error
+(standard_in) 1: syntax error
+(standard_in) 1: syntax error
+Run 4:
+Cycles: 
+Instructions: 
+Time:  seconds
+(standard_in) 1: syntax error
+(standard_in) 1: syntax error
+(standard_in) 1: syntax error
+Run 5:
+Cycles: 
+Instructions: 
+Time:  seconds
+(standard_in) 1: syntax error
+(standard_in) 1: syntax error
+(standard_in) 1: syntax error
+(standard_in) 1: syntax error
+(standard_in) 1: syntax error
+(standard_in) 1: syntax error
+Average Cycles: 
+Average Instructions: 
+Average Time:  seconds
+Results saved in output_perf_avg_cpu_exe_454629/perf_avg_results.txt

@@ -1,0 +1,6 @@
+srun: interrupt (one more within 1 sec to abort)
+srun: step:454648.0 task 0: running
+srun: sending Ctrl-C to job 454648.0
+./fluid_sim: Interrupt
+srun: Job step aborted: Waiting up to 62 seconds for job step to finish.
+slurmstepd: error: *** STEP 454648.0 ON compute-134-102 CANCELLED AT 2024-10-17T22:41:12 ***
