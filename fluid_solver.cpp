@@ -62,30 +62,25 @@ void lin_solve(int M, int N, int O, int b, float *x, float *x0, float a,
   float a_inv_c = a*inv_c;
   int row = M+2;
   int slice = row * (N+2);
+  float temp_array[M];
+
   for (int l = 0; l < LINEARSOLVERTIMES; l++) {
     for (int k = 1; k <= O; k++) {
       for (int j = 1; j <= N; j++) {
         int curr_idx = IX(1,j,k);
-        float sum_neighbours = x[curr_idx+1] +
-                                 x[curr_idx - row] + x[curr_idx + row] +
-                                 x[curr_idx - slice] + x[curr_idx +slice];
-        float x0_prod = x0[curr_idx] * inv_c;
-
-        for (int i = 1; i <= M; i++) {
-          float sum_next_neighbours = x[curr_idx+2] +
-                                 x[curr_idx+1 - row] + x[curr_idx+1 + row] +
-                                 x[curr_idx+1 - slice] + x[curr_idx+1 +slice];
-
-          float x0_prod_next = x0[curr_idx+1] * inv_c;
-
-          sum_neighbours += x[curr_idx -1] ;
-          x[curr_idx] = x0_prod + a_inv_c * (sum_neighbours);
-          sum_neighbours = sum_next_neighbours;
-          x0_prod = x0_prod_next;
-          
-          curr_idx++;
+        
+        for(int t=1; t<=M; t++) {
+          temp_array[t] = (x[curr_idx+1] +
+                        x[curr_idx - row] + x[curr_idx + row] +
+                        x[curr_idx - slice] + x[curr_idx +slice]) * a_inv_c + x0[curr_idx] * inv_c;
+          curr_idx++;            
         }
 
+        curr_idx = IX(1,j,k);
+        for(int z=1; z<=M; z++){
+          x[curr_idx] = temp_array[z] + x[curr_idx-1] * a_inv_c;
+          curr_idx++;
+        }
       }
     }
   set_bnd(M, N, O, b, x);
@@ -149,14 +144,15 @@ void advect(int M, int N, int O, int b, float *d, float *d0, float *u, float *v,
 // divergence-free)
 void project(int M, int N, int O, float *u, float *v, float *w, float *p,
              float *div) {
+  
+  float max_value_inv = 1.0f / MAX(M, MAX(N, O));
   for (int i = 1; i <= M; i++) {
     for (int j = 1; j <= N; j++) {
       for (int k = 1; k <= O; k++) {
         div[IX(i, j, k)] =
             -0.5f *
             (u[IX(i + 1, j, k)] - u[IX(i - 1, j, k)] + v[IX(i, j + 1, k)] -
-             v[IX(i, j - 1, k)] + w[IX(i, j, k + 1)] - w[IX(i, j, k - 1)]) /
-            MAX(M, MAX(N, O));
+             v[IX(i, j - 1, k)] + w[IX(i, j, k + 1)] - w[IX(i, j, k - 1)]) * max_value_inv;
         p[IX(i, j, k)] = 0;
       }
     }
