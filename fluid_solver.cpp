@@ -58,14 +58,30 @@ void lin_solve(int M, int N, int O, int b, float *x, float *x0, float a,
                float c) {
 
   float inv_c = 1.0f / c;
+  float a_inv_c = a*inv_c;
+  int row = M+2;
+  int slice = row * (N+2);
   for (int l = 0; l < LINEARSOLVERTIMES; l++) {
     for (int k = 1; k <= O; k++) {
       for (int j = 1; j <= N; j++) {
-        for (int i = 1; i <= M; i++) {
-          x[IX(i, j, k)] = (x0[IX(i, j, k)] +
-                          a * (x[IX(i - 1, j, k)] + x[IX(i + 1, j, k)] +
-                                x[IX(i, j - 1, k)] + x[IX(i, j + 1, k)] +
-                                x[IX(i, j, k - 1)] + x[IX(i, j, k + 1)])) * inv_c;
+        int curr_idx = IX(1,j,k);
+        for (int i = 1; i <= M; i+=2) {
+          float sum_neighbours = x[curr_idx+1] + x[curr_idx - row] + x[curr_idx + row] +
+                                 x[curr_idx - slice] + x[curr_idx +slice];
+
+          float sum_neighbours2 = x[curr_idx+2] + x[curr_idx+1 - row] + x[curr_idx+1 + row] +
+                                 x[curr_idx+1 - slice] + x[curr_idx+1 +slice];
+
+          float x0_prod = x0[curr_idx] * inv_c;
+          float x0_prod2 = x0[curr_idx+1] * inv_c;
+
+          sum_neighbours += x[curr_idx-1] ;
+          x[curr_idx] = x0_prod + a_inv_c * (sum_neighbours);
+
+          sum_neighbours2 += x[curr_idx] ;
+          x[curr_idx+1] = x0_prod2 + a_inv_c * (sum_neighbours2);
+          
+          curr_idx+=2;
         }
       }
     }
