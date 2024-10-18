@@ -54,6 +54,7 @@ void set_bnd(int M, int N, int O, int b, float *x) {
 }
 
 // Linear solve for implicit methods (diffusion)
+// Linear solve for implicit methods (diffusion)
 void lin_solve(int M, int N, int O, int b, float *x, float *x0, float a,
                float c) {
 
@@ -65,24 +66,26 @@ void lin_solve(int M, int N, int O, int b, float *x, float *x0, float a,
     for (int k = 1; k <= O; k++) {
       for (int j = 1; j <= N; j++) {
         int curr_idx = IX(1,j,k);
-        for (int i = 1; i <= M; i+=2) {
-          float sum_neighbours = x[curr_idx+1] + x[curr_idx - row] + x[curr_idx + row] +
+        float sum_neighbours = x[curr_idx+1] +
+                                 x[curr_idx - row] + x[curr_idx + row] +
                                  x[curr_idx - slice] + x[curr_idx +slice];
+        float x0_prod = x0[curr_idx] * inv_c;
 
-          float sum_neighbours2 = x[curr_idx+2] + x[curr_idx+1 - row] + x[curr_idx+1 + row] +
+        for (int i = 1; i <= M; i++) {
+          float sum_next_neighbours = x[curr_idx+2] +
+                                 x[curr_idx+1 - row] + x[curr_idx+1 + row] +
                                  x[curr_idx+1 - slice] + x[curr_idx+1 +slice];
 
-          float x0_prod = x0[curr_idx] * inv_c;
-          float x0_prod2 = x0[curr_idx+1] * inv_c;
+          float x0_prod_next = x0[curr_idx+1] * inv_c;
 
-          sum_neighbours += x[curr_idx-1] ;
+          sum_neighbours += x[curr_idx -1] ;
           x[curr_idx] = x0_prod + a_inv_c * (sum_neighbours);
-
-          sum_neighbours2 += x[curr_idx] ;
-          x[curr_idx+1] = x0_prod2 + a_inv_c * (sum_neighbours2);
+          sum_neighbours = sum_next_neighbours;
+          x0_prod = x0_prod_next;
           
-          curr_idx+=2;
+          curr_idx++;
         }
+
       }
     }
   set_bnd(M, N, O, b, x);
