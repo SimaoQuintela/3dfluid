@@ -1,6 +1,7 @@
 CPP = g++ -O2 -g -fno-omit-frame-pointer -Wall
 SRCS = main.cpp fluid_solver.cpp EventManager.cpp
-CPP2 = g++ -O3 -g -fno-omit-frame-pointer -Wall -mavx -funroll-loops -floop-block -floop-parallelize-all -fverbose-asm -ftree-vectorize -fopt-info-vec-missed # -fopt-info-vec 
+CPP2 = g++ -Ofast -g -fno-omit-frame-pointer -Wall -mavx -funroll-loops -floop-block -floop-parallelize-all -fverbose-asm -ftree-vectorize -fopt-info-vec-missed # -fopt-info-vec 
+
 
 OUTPUT_DIR="output_${SLURM_JOB_NAME}_${SLURM_JOB_ID}"
 
