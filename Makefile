@@ -6,10 +6,8 @@ CPP2 = g++ -Ofast -g -fno-omit-frame-pointer -Wall -mavx -funroll-loops -floop-b
 OUTPUT_DIR="output_${SLURM_JOB_NAME}_${SLURM_JOB_ID}"
 
 all:
-	$(CPP) $(SRCS) -o fluid_sim
-
-fast:
 	$(CPP2) $(SRCS) -o fluid_sim
+
 
 batch:  
 	@mkdir -p $(OUTPUT_DIR)
